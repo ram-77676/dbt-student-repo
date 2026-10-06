@@ -1,0 +1,16 @@
+
+airbnb:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: UFCPBJF-EV19764
+      user: dbt
+      role: TRANSFORM
+      private_key_path: 'C:/Users/Ram Satish/rsa_key.p8'
+      private_key_passphrase: "{{ env_var('DBT_KEY_PASSPHRASE') }}"
+      database: AIRBNB
+      schema: DEV
+      threads: 1
+      warehouse: COMPUTE_WH
+
