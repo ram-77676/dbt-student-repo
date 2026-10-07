@@ -7,8 +7,7 @@ airbnb:
       account: UFCPBJF-EV19764
       user: dbt
       role: TRANSFORM
-      private_key_path: 'C:/Users/Ram Satish/rsa_key.p8'
-      private_key_passphrase: "{{ env_var('DBT_KEY_PASSPHRASE') }}"
+      private_key_path: "/workspaces/dbt-student-repo/airbnb/rsa_key.p8"
       database: AIRBNB
       schema: DEV
       threads: 1
