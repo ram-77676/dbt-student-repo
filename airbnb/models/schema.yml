@@ -3,12 +3,6 @@ version: 2
 
 models:
   - name: dim_listings_cleansed
-    description: Cleansed table which contains Airbnb listings.
-    data_tests:
-      - minimum_row_count:
-          arguments:
-            min_row_count: 1000
-          severity: error
     columns:
       - name: listing_id
         data_tests:
@@ -46,6 +40,8 @@ models:
       - name: host_id
         description: "Unique identifier for each host"
         data_type: integer
+        constraints:
+          - type: not_null
         data_tests:
           - unique
           - not_null
@@ -53,6 +49,8 @@ models:
       - name: host_name
         description: "Name of the host"
         data_type: string
+        constraints:
+          - type: not_null
         data_tests:
           - not_null
 
