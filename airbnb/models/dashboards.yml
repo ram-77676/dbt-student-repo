@@ -1,0 +1,19 @@
+version: 2
+
+
+exposures:
+  - name: executive_dashboard
+    label: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://9befde78.us2a.app.preset.io/superset/dashboard/8/?edit=true&native_filters_key=j3m6moGb95G9KmoandhFew
+    description: Executive Dashboard about Airbnb listings and hosts
+
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_fullmoon_reviews')
+
+    owner:
+      name: Rama Satish Vemulapalli
+      email: ram.77676@gmail.com
