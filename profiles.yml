@@ -13,3 +13,14 @@ airbnb:
       threads: 1
       warehouse: COMPUTE_WH
 
+    prod:
+      type: snowflake
+      account: UFCPBJF-EV19764
+      user: dbt
+      role: TRANSFORM
+      private_key_path: "/workspaces/dbt-student-repo/airbnb/rsa_key.p8"
+      database: AIRBNB
+      schema: PROD
+      threads: 1
+      warehouse: COMPUTE_WH
+
